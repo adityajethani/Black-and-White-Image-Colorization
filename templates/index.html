@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Colorization</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎨 Image Colorization</h1>
+        <p class="subtitle">Upload a grayscale image and get a colorized version instantly!</p>
+
+        <div class="upload-box">
+            <form action="/colorize" method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">
+                    <input type="file" name="file" id="file-upload" onchange="updateFileName()" required>
+                    📂 Choose Image
+                </label>
+                <span id="file-name">No file selected</span>
+                <button type="submit" class="btn">✨ Colorize Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function updateFileName() {
+            const fileInput = document.getElementById("file-upload");
+            const fileName = document.getElementById("file-name");
+            fileName.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : "No file selected";
+        }
+    </script>
+</body>
+</html>

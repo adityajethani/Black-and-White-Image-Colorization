@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorized Image</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🌟 Your Colorized Image!</h1>
+        <div class="image-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img src="{{ original_image }}" alt="Original Image">
+            </div>
+            <div class="image-box">
+                <h3>Colorized Image</h3>
+                <img src="{{ result_image }}" alt="Colorized Image">
+            </div>
+        </div>
+        <br>
+        <a href="{{ result_image }}" download class="btn">📥 Download Colorized Image</a>
+        <a href="/" class="btn upload-btn">🔄 Upload Another Image</a>
+    </div>
+</body>
+</html>
